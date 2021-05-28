@@ -51,7 +51,9 @@
 #include "dynamixel_msgs/JointState.h"
 
 //For Nuitrack SDK
+// #include "Nuitrack.h"
 #include "nuitrack/Nuitrack.h"
+
 #define KEY_JOINT_TO_TRACK    JOINT_LEFT_COLLAR // JOINT_TORSO // JOINT_NECK
 
 // For Face JSON parsing
@@ -358,6 +360,7 @@ namespace nuitrack_body_tracker
         // if the same ID as skeleton id, publish face data too
 
         std::string face_info = tdv::nuitrack::Nuitrack::getInstancesJson();
+
         //std::cout << face_info; //This will print the entire json object.
         // Good examples at: http://zenol.fr/blog/boost-property-tree/en.html
 

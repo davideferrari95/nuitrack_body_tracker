@@ -53,6 +53,8 @@
   <exec_depend>visualization_msgs</exec_depend>
   <exec_depend>body_tracker_msgs</exec_depend>
 
+  <!-- <depend>nuitrack_core</depend> -->
+
 
   <!-- The export tag contains other, unspecified, tags -->
   <export>

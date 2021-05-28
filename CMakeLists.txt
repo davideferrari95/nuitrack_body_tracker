@@ -6,7 +6,8 @@ add_compile_options(-std=c++11)
 
 # For nuitrack
 # add_compile_options(-std=c++11 -D_GLIBCXX_USE_CXX11_ABI=0)
-set(NUITRACK_SDK_PATH /home/system/sdk/NuitrackSDK) 
+set(NUITRACK_SDK_PATH /home/davide/davide_ws/src/Mindful/gesture_recognition/nuitrack/nuitrack-sdk) 
+# set(NUITRACK_SDK_PATH /usr/local/lib/nuitrack)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
@@ -17,6 +18,7 @@ find_package(catkin REQUIRED COMPONENTS
   visualization_msgs
   body_tracker_msgs
   std_msgs
+  # nuitrack_core
 )
 
 ## System dependencies are found with CMake's conventions
@@ -117,6 +119,7 @@ catkin_package(
     visualization_msgs
     std_msgs 
     body_tracker_msgs
+    # nuitrack_core
 #  DEPENDS system_lib
 )
 
@@ -127,9 +130,10 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
-# include
+  # include
   ${NUITRACK_SDK_PATH}/Nuitrack/include   
-  ${NUITRACK_SDK_PATH}/Nuitrack/include/middleware  
+  ${NUITRACK_SDK_PATH}/Nuitrack/include/middleware 
+  # nuitrack_core/include
   ${catkin_INCLUDE_DIRS}
 )
 
